@@ -8,8 +8,15 @@ public class Elephant extends Animal {
         return trunkLength;
     }
 
-    public Elephant(double trunkLength, boolean canRide) {
+    public Elephant(String name, double weight, String countryOfOrigin, String type, double trunkLength, boolean canRide) {
+        super(name,weight, countryOfOrigin, type);
         this.trunkLength = trunkLength;
         this.canRide = canRide;
+    }
+    @Override
+    public void buildAnimal() {
+        super.buildAnimal();
+        System.out.println("This Elephant has a trunk length of " + trunkLength
+                + "and it is " + canRide + " that you can ride them.");
     }
 }

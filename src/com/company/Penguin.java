@@ -12,14 +12,15 @@ public class Penguin extends Animal {
         return eggsLaid;
     }
 
-    public Penguin(double wingSpan, int eggsLaid) {
+    public Penguin(String name, double weight, String countryOfOrigin, String type, double wingSpan, int eggsLaid) {
+        super(name,weight, countryOfOrigin, type);
         this.wingSpan = wingSpan;
         this.eggsLaid = eggsLaid;
     }
-
-    public Penguin buildPenguin() {
+@Override
+    public void buildAnimal() {
+        super.buildAnimal();
         System.out.println("This penguin has a wing span of " + wingSpan
         + "and has laid " +eggsLaid + " eggs.");
-        return buildPenguin();
     }
 }
