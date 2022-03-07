@@ -47,26 +47,26 @@ public class Main {
             System.out.println(enclosures);
             System.out.println("Which enclosure would you like to view?");
             Scanner userInput2 = new Scanner(System.in);
-            String userAnswer2 = userInput2.nextLine();
-            if (userAnswer2.equals("penguin")) {
+            String userAnswerEnclosure = userInput2.nextLine();
+            if (userAnswerEnclosure.equals("penguin")) {
                 System.out.println(penguin1.getName() + " " + penguin2.getName());
-            } else if (userAnswer2.equals("elephant"))
+            } else if (userAnswerEnclosure.equals("elephant")) {
                 System.out.println(elephant1.getName() + " " + elephant2.getName());
-        } else if
-        (userAnswer == 2) {
-            System.out.println(guestServices);
+            } else System.out.println("Input not valid, Please try again!");
+        } else if (userAnswer == 2) {
+            System.out.print(guestServices);
             System.out.println("Which guest service can we help you with?");
             Scanner userInput2 = new Scanner(System.in);
-            String userAnswer2 = userInput2.nextLine();
-            if (userAnswer2.equals("Visitor Center")) {
+            String userAnswerService = userInput2.nextLine();
+            if (userAnswerService.equals("Visitor Center")) {
                 System.out.println("Welcome");
-            } else if (userAnswer2.equals("Restrooms")) {
+            } else if (userAnswerService.equals("Restrooms")) {
                 System.out.println("Go down the hall on the left and restrooms will be the first doors on the right!");
-            } else if (userAnswer2.equals("Animal Droppings")) {
+            } else if (userAnswerService.equals("Animal Droppings")) {
                 System.out.println("Through the double doors on the right!");
-            } else if (userAnswer2.equals("Animals We Eat Buffet")) {
+            } else if (userAnswerService.equals("Animals We Eat Buffet")) {
                 System.out.println("Go just out the front doors, head north and you should see a big sign!");
-            }
-        }
+            } else System.out.println("Input not valid, Please try again!");
+        }else System.out.println("Input not valid, Please try again!");
     }
 }
