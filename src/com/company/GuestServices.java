@@ -5,17 +5,19 @@ import java.util.List;
 
 public class GuestServices extends Building{
     List services = new ArrayList();
-    int capacity;
+    private boolean isOpen;
 
     public List getServices() {
         return services;
     }
-
-    public int getCapacity() {
-        return capacity;
-    }
-    public GuestServices(List <String> allServices, int capacity){
+    public GuestServices(String name, String location, List <String> allServices, boolean isOpen){
+        super(name, location);
         services.addAll(allServices);
-        this.capacity=capacity;
+        this.isOpen=isOpen;
+    }
+    @Override
+    public void buildingInfo() {
+        super.buildingInfo();
+        System.out.println("We offer the following services: " +services+ "\n Are we open?"+ isOpen+ ".");
     }
 }

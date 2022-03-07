@@ -17,6 +17,6 @@ public class Elephant extends Animal {
     public void buildAnimal() {
         super.buildAnimal();
         System.out.println("This Elephant has a trunk length of " + trunkLength
-                + "and it is " + canRide + " that you can ride them.");
+                + "inches, and it is " + canRide + " that you can ride them.");
     }
 }

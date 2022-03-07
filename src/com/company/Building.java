@@ -18,4 +18,5 @@ public class Building {
         System.out.println("The building, "+name+ " is located "+location+". ");
 
     }
+
 }
